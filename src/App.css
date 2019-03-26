@@ -1,0 +1,132 @@
+body {
+  text-align: center;
+  background-color: grey;
+
+}
+h3, h2{
+  color: yellow;
+  font-family: "DS-Digital", sans-serif;
+  text-align: right;
+
+}
+h3{
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+#calculator {
+  margin-top: 100px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: black;
+  padding-left: 10px;
+  padding-right: 12px;
+  padding-bottom: 10px;
+}
+
+#display #input{
+  height: 1em;
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ 
+}
+
+button {
+  outline: 0;
+  border-color: black ;
+  font-size: 15px;
+  margin-left: 1px;
+}
+
+button:hover {
+  border: 3px solid #00BEFF;
+  color: black;
+}
+
+button:active, #clear:active, #equals:active {
+  background-color: white;
+}
+
+#clear {
+  background-color: red;
+}
+ button{
+  color: white;
+  font-weight: bold;
+}
+.sm-button {
+  width: 80px;
+  height: 70px;
+  margin-right: -1px;
+  padding: 0;
+ 
+}
+
+#clear, #zero {
+  width: 160px;
+  height: 70px;
+  padding: 0;
+  margin-right: -1px;
+  padding-right: -1px;
+}
+#equals {
+  width: 80px;
+  height: 140px;
+  margin-left: -51px;
+  padding: 0;
+  background-color:#005D80
+}
+.number {
+  background-color: #353535;
+}
+.operator {
+  background-color: grey;
+}
+.square {
+  width: 50%;
+  padding: 0;
+ 
+}
+h3{
+  color: #FFA600;
+}
+
+h2 {
+  color: white;
+}
+
+#fourth-row {
+  display: inline-block;
+}
+
+#first-square {
+  float: left;
+  margin-right: -6px;
+}
+
+#second-square {
+  float: right;
+  display: inline-block;
+  grid-template-columns: 1fr 1fr;
+  margin-right: 3px;
+ 
+}
+.column{
+  width: 25px;
+  display: inline-block;
+}
+#first-column {
+  float: left;
+  margin-left: 3px;
+}
+
+#second-column {
+ float: right;
+}
