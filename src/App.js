@@ -212,11 +212,11 @@ class App extends Component {
       }
 
       let calculatedOutput = array[0];
-      if (Math.abs(calculatedOutput%1) == 0) {
+      if (Math.abs(calculatedOutput%1) === 0) {
         calculatedOutput = parseInt(calculatedOutput, 10);
       }
       let sign = "";
-      if (this.state.input.charAt(this.state.input.length - 1) == "=") {
+      if (this.state.input.charAt(this.state.input.length - 1) === "=") {
         return
       }
     this.setState({
@@ -230,24 +230,26 @@ class App extends Component {
   }
  
   addDecimal() {
+
     let lastValue = this.state.inputArr[this.state.inputArr.length - 1];
     lastValue+="";
-    console.log(lastValue);
-    if (lastValue == "undefined"){
+
+    if (lastValue === "undefined"){
         this.setState({
         inputArr: this.state.inputArr.concat("0."),
         input: "0."
       });
-   }else if (lastValue == "+" || lastValue == "-" || lastValue == "/" || lastValue == "x") {
+
+   }else if (lastValue === "+" || lastValue === "-" || lastValue === "/" || lastValue === "x") {
       let array = this.state.inputArr.slice();
       let newDigit = "0.";
       array.push(newDigit);
-      console.log(array);
+      
       this.setState({
         inputArr: array,
         input: this.state.input + "0."
       });
-    }else if (lastValue.indexOf(".") == -1) {
+    }else if (lastValue.indexOf(".") === -1) {
       let array = this.state.inputArr.slice();
       lastValue+="."
       array[array.length - 1] = lastValue; 
@@ -255,8 +257,6 @@ class App extends Component {
         inputArr: array,
         input: array.join(""),
         outputRequested: false
-      }, function() {
-        console.log(this.state);
       });
     }
     
@@ -316,7 +316,7 @@ class App extends Component {
             </div>
         </div>
     );
-    
+
   }
 }
 
